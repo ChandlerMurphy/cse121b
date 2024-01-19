@@ -3,7 +3,7 @@
 /* Step 1 - Setup type tasks - no code required */
 
 /* Step 2 - Variables */
-let fullName = 'Chandler Murphy';
+let fullName = "Chandler Murphy";
 let currentYear = "2024";
 let profilePicture = "/w02-task/images/me_img_1422.jpg";
 
