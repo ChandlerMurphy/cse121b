@@ -5,7 +5,7 @@
 /* Step 2 - Variables */
 let fullName = "Chandler Murphy";
 let currentYear = "2024";
-let profilePicture = "../w02-task/images/me_img_1422.jpg";
+let profilePicture = "../images/me_img_1422.jpg";
 
 /* Step 3 - Element Variables */
 const nameElement = document.getElementById("name");
