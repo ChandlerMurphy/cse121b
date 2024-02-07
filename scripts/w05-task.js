@@ -13,7 +13,7 @@ const displayTemples = async (temples) => {
         h3Element.innerHTML = temple.templeName;
 
         const imgElement = document.createElement("img");
-        imgElement.setAttribute("src", temple.imageURL);
+        imgElement.setAttribute("src", temple.imageUrl);
         imgElement.setAttribute("alt", temple.location);
         
         articleElement.appendChild(h3Element);
@@ -51,7 +51,7 @@ const sortBy = (temples) => {
             displayTemples(notUtahTempleList);
             break;
         case "older":
-            let olderTempleList = temples.filter((temple) => temple.dedicated > "1950, 0, 1");
+            let olderTempleList = temples.filter((temple) => temple.dedicated < "1950, 0, 1");
             displayTemples(olderTempleList);
             break;
         case "all":
