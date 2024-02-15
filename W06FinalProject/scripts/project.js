@@ -1,5 +1,6 @@
 const amiiboElement = document.querySelector("#amiibos");
 let amiiboList = [];
+let newAmiiboList = [];
 
 const displayAmiibos = async (amiibos) => {
     amiibos.forEach(amiibo => {
@@ -27,23 +28,19 @@ const reset = () => {
     document.querySelector("#amiibos").innerHTML = "";
 }
 
-const filterBy = (amiibos) => {
+const filterBy = async () => {
     reset();
     let filter = document.querySelector("#amiibotype").value;
-    amiibos.forEach(amiibo => {
+    amiiboList.amiibo.forEach(amiibo => {
         if (amiibo.character.includes(filter))
         {
-            let newAmiiboList = amiibos.filter((amiibo) => amiibo.character.includes(filter));
-            displayAmiibos(newAmiiboList);
-            console.log("This test works")
-        } else 
-        {
-            displayAmiibos(amiibos);
-            console.log("This test does not work")
+            newAmiiboList.push(amiibo);
         }
+        displayAmiibos(newAmiiboList);
+        newAmiiboList.length= 0;
     });
 }
 
 getAmiibos();
 
-document.querySelector("#submit").addEventListener("click", filterBy(amiiboList.amiibo));
+document.querySelector("#submit").addEventListener("click", filterBy);
